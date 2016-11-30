@@ -1,0 +1,12 @@
+#tablero{
+    background-color: black;
+    width: 1500px;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+#escudo{
+    background-color: red;
+    width: 200px;
+}
