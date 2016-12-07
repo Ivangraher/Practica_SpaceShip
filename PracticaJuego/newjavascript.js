@@ -7,38 +7,10 @@ var audio = new Audio();
 
 function iniciar() {
     $('#empezar').click(asteroides);
-    $('#juego > usu').click(sendAjax);
     nave.css("position", "absolute");
     $('#tablero').append(nave);
     audio = document.getElementById('musica');
 }
-
-//función para guardar el contenido del input del usuario
-function sendAjax() {
-    var usuario = $("#usuario").val();
-    $.ajax({
-        type: "POST",
-        url: "newEmptyPHP.php",
-        dataType: "json",
-        data: {"usuario": usuario,
-               "puntuacion": 0},
-        success: function (respuesta) {
-           puntos = respuesta.
-           puntos();
-        }
-    });
-}
-
-/* var ul = "<ul>";
-                for(var name in response.users){
-                    if(response.users[name].name != ""){
-                        ul += "<li>Name: "+response.users[name].name+", score: "+response.users[name].score+"</li>";
-                    }
-                }
-                ul+="</ul>";
-                $("#usersList > ul > li").remove();
-                $("#usersList").html(ul);
-                $("#start").fadeIn();*/
 
 //funcion para añadir propiedades css al meteorito
 function propiedades(asteroide, random) {
