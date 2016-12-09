@@ -4,7 +4,6 @@ var nave = $("<img src='nave.png'/>");
 var puntos = 0;
 var audio = new Audio();
 
-
 function iniciar() {
     $('#empezar').click(asteroides);
     nave.css("position", "absolute");
